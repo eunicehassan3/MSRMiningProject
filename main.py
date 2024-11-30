@@ -15,15 +15,15 @@ def main():
 
 def create_correlation_matrix():
     # Load the CSV file into a pandas DataFrame
-    average_population_metric("mining_project_data.csv", "updated_mining_project_data.csv")
+    # average_population_metric("mining_project_data.csv", "updated_mining_project_data.csv")
     # print(new_file)
-    df = pd.read_csv('updated_mining_project_data.csv')
+    df = pd.read_csv('updated msr_data(without-duplicates).csv')
     print(df)
 
     # Calculate the correlation matrix
-    correlation_matrix = df[['total_releases', 'aggregate_score', 'speed_metric', 'average_popularity_metric']].corr()
+    correlation_matrix = df[['total_dependencies', 'aggregate_score', 'normalized_speed_metric', 'normalized_popularity_metric', 'normalized_freshness_metric','speed_metric','average_popularity_metric','average_freshness_metric']].corr()
     # correlation_matrix = df[['popularity_score', 'total_popularity_1_year', 'average_freshness', 'average_speed', 'dependencies_count']].corr()
-    #
+
     # Plot the correlation matrix using a heatmap
     plt.figure(figsize=(8, 6))
     sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', fmt=".2f", vmin=-1, vmax=1)
@@ -52,12 +52,12 @@ def average_population_metric(file, output_csv):
 
 def train_random_forest_model():
     # load CSV file
-    file_path = 'mining_project_data.csv'
+    file_path = 'updated msr_data(without-duplicates).csv'
     data = pd.read_csv(file_path)
 
     # get relevant columns in csv file
-    features = ['speed', 'aggregated_score', 'freshness', 'dependency_count']
-    target = 'popularity_1_year'
+    features = ['normalized_speed_metric', 'aggregate_score', 'normalized_popularity_metric', 'normalized_freshness_metric']
+    target = 'total_dependencies'
 
     # drop any rows with missing values - if exists
     data = data.dropna(subset=features + [target])
