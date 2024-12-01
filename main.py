@@ -23,7 +23,7 @@ def create_correlation_matrix():
     print(df)
 
     # Calculate the correlation matrix
-    correlation_matrix = df[['total_dependencies', 'aggregate_score', 'normalized_speed_metric', 'normalized_popularity_metric', 'normalized_freshness_metric','speed_metric','average_popularity_metric','average_freshness_metric']].corr()
+    correlation_matrix = df[['total_dependencies', 'aggregate_score', 'normalized_speed_metric', 'normalized_popularity_metric', 'normalized_freshness_metric']].corr()
     # correlation_matrix = df[['popularity_score', 'total_popularity_1_year', 'average_freshness', 'average_speed', 'dependencies_count']].corr()
 
     # Plot the correlation matrix using a heatmap
