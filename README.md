@@ -25,4 +25,4 @@ This project incorporates the following technologies:
 - Python
 
 ## Contributors
-Eunice Hassan (Sometimes referenced as Saheed Hassan in code) and Elisabeth Hassan
+Eunice Hassan (sometimes referenced as Saheed Hassan in code) and Elisabeth Hassan
