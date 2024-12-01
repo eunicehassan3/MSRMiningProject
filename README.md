@@ -1,7 +1,7 @@
 # MSR Mining Project
 Software artifacts, such as libraries, frameworks, and API's play a huge role in the software development community. The popularity and usability of such artifacts plays a critical role in their adoption and sustainability. This research investigates whether an artifact’s number of dependents correlates with its popularity. Using a dataset of open-source artifacts containing software artifacts, releases, and associated metrics, we analyze the relationship between dependency count and popularity, using statistical methods and visualization techniques to identify trends. Popularity metrics include popularity-1-year, which tracks the frequency of new artifact versions released within a year, freshness, reflecting the recency of updates, and speed, indicating the pace of release cycles.
 
-This code includes the data we used for our analysis, code for the correlation matrix, and Random Forest ML model for feature importance analysis.
+This code includes the data we used for our analysis, code for the correlation matrix, Random Forest ML model for feature importance analysis, and code to visualize results in a box plot and scatterplot.
 
 
 ## Getting Started
