@@ -17,8 +17,6 @@ def main():
 
 def create_correlation_matrix():
     # Load the CSV file into a pandas DataFrame
-    # average_population_metric("mining_project_data.csv", "updated_mining_project_data.csv")
-    # print(new_file)
     df = pd.read_csv('updated msr_data(without-duplicates).csv')
     print(df)
 
