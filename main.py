@@ -10,8 +10,9 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
 
 def main():
-    create_correlation_matrix()
-    train_random_forest_model()
+    # create_correlation_matrix()
+    # train_random_forest_model()
+    visualize_categories()
 
 def create_correlation_matrix():
     # Load the CSV file into a pandas DataFrame
@@ -92,6 +93,47 @@ def train_random_forest_model():
     plt.title('Feature Importances')
     plt.xlabel('Importance Score')
     plt.ylabel('Feature')
+    plt.tight_layout()
+    plt.show()
+
+def visualize_categories():
+    file_path = 'mining_project_results_categorized.csv'
+    data = pd.read_csv(file_path)
+    # print(data.head())
+
+    # identify columns in data
+    artifact_column = 'artifact_type'
+    popularity_column = 'average_popularity_metric'
+    dependency_column = 'total_dependencies'
+    aggregate_column = 'aggregate_score'
+
+    # Box Plot: Popularity by Artifact Type
+    plt.figure(figsize=(5, 5))
+    sns.boxplot(x=artifact_column, y=popularity_column, data=data, palette="Set2")
+    plt.title("Popularity by Artifact Type")
+    plt.xlabel("Artifact Type")
+    plt.ylabel("Popularity")
+    plt.xticks(rotation=45)
+    plt.tight_layout()
+    plt.show()
+
+    # Scatter Plot: Popularity vs Dependency Count
+    plt.figure(figsize=(5, 5))
+    sns.scatterplot(x=dependency_column, y=popularity_column, hue=artifact_column, data=data, palette="Set2")
+    plt.title("Popularity vs Dependency Count")
+    plt.xlabel("Dependency Count")
+    plt.ylabel("Popularity")
+    plt.legend(title="Artifact Type")
+    plt.tight_layout()
+    plt.show()
+
+    # Scatter Plot: Aggregate Score vs Popularity
+    plt.figure(figsize=(5, 5))
+    sns.scatterplot(x=dependency_column, y=aggregate_column, hue=artifact_column, data=data, palette="Set2")
+    plt.title("Aggregate Popularity Score vs Popularity by Artifact Type")
+    plt.xlabel("Aggregate Popularity Score")
+    plt.ylabel("Popularity")
+    plt.legend(title="Artifact Type")
     plt.tight_layout()
     plt.show()
 

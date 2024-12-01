@@ -24,8 +24,5 @@ This project incorporates the following technologies:
 - Neo4j Desktop: to open and query the database
 - Python
 
-## Cypher Used in Neo4J Desktop
-
-
 ## Contributors
 Eunice Hassan (Sometimes referenced as Saheed Hassan in code) and Elisabeth Hassan
