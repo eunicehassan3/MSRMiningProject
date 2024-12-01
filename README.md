@@ -19,7 +19,7 @@ To run the program, please follow these steps:
 
 ## Technologies Used in Project
 
-This project incorporates the following technologies: 
+This project utilized the following technologies: 
 - Maven Central (with metrics) Graph Dependency Database: where the dataset was sourced
 - Neo4j Desktop: to open and query the database
 - Python
