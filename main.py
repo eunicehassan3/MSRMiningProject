@@ -13,6 +13,7 @@ def main():
     create_correlation_matrix()
     train_random_forest_model_dependencies()
     train_random_forest_model_score()
+    visualize_categories()
 
 def create_correlation_matrix():
     # Load the CSV file into a pandas DataFrame
@@ -182,5 +183,6 @@ def visualize_categories():
     plt.legend(title="Artifact Type")
     plt.tight_layout()
     plt.show()
+
 
 main()
