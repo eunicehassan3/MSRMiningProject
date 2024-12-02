@@ -8,7 +8,7 @@ This code includes the data we used for our analysis, code for the correlation m
 
 To run the program, please follow these steps:
 
-1. **Clone the repository in an IDE:**
+1. **Clone the repository in a terminal:**
 
    ```bash
    git clone https://github.com/eunicehassan3/MSRMiningProject.git
