@@ -154,10 +154,10 @@ def visualize_categories():
 
     # Box Plot: Popularity by Artifact Type
     plt.figure(figsize=(5, 5))
-    sns.boxplot(x=artifact_column, y=popularity_column, data=data, palette="Set2")
-    plt.title("Popularity by Artifact Type")
+    sns.boxplot(x=artifact_column, y=aggregate_column, data=data, palette="Set2")
+    plt.title("Aggregate Popularity by Artifact Type")
     plt.xlabel("Artifact Type")
-    plt.ylabel("Popularity")
+    plt.ylabel("Aggregate Popularity")
     plt.xticks(rotation=45)
     plt.tight_layout()
     plt.show()
