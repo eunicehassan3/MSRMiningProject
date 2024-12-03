@@ -163,16 +163,16 @@ def visualize_categories():
     plt.show()
 
     # Scatter Plot: Popularity vs Dependency Count
-    plt.figure(figsize=(5, 5))
-    sns.scatterplot(x=dependency_column, y=popularity_column, hue=artifact_column, data=data, palette="Set2")
-    sns.regplot(x=dependency_column, y=popularity_column, data=data, scatter=False, color="blue",
-                line_kws={"label": "Trendline"})
-    plt.title("Popularity vs Dependency Count")
-    plt.xlabel("Dependency Count")
-    plt.ylabel("Popularity")
-    plt.legend(title="Artifact Type")
-    plt.tight_layout()
-    plt.show()
+    # plt.figure(figsize=(5, 5))
+    # sns.scatterplot(x=dependency_column, y=popularity_column, hue=artifact_column, data=data, palette="Set2")
+    # sns.regplot(x=dependency_column, y=popularity_column, data=data, scatter=False, color="blue",
+    #             line_kws={"label": "Trendline"})
+    # plt.title("Popularity vs Dependency Count")
+    # plt.xlabel("Dependency Count")
+    # plt.ylabel("Popularity")
+    # plt.legend(title="Artifact Type")
+    # plt.tight_layout()
+    # plt.show()
 
     # Scatter Plot: Aggregate Score vs Dependency
     plt.figure(figsize=(5, 5))
